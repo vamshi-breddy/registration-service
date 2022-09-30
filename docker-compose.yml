@@ -1,0 +1,22 @@
+#version: "3.8"
+#services:
+#  server:
+#    build: .
+#    restart: always
+#    ports:
+#      - 9090:9090
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/database?autoReconnect=true&useSSL=false
+#    depends_on:
+#      - mysqldb
+#  mysqldb:
+#    image: "mysql:5.7"
+#    ports:
+#      - 3307:3306
+#    environment:
+#      MYSQL_DATABASE: registration
+#      MYSQL_USER: vamshi
+#      MYSQL_PASSWORD: password
+#      MYSQL_ROOT_PASSWORD: password
+#
+#
