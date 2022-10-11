@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @ToString
 @Table(name="USERS_REGISTRATION")
-public class User {
+public class UserRegDetails {
     @Id
     @GeneratedValue
     private int id;

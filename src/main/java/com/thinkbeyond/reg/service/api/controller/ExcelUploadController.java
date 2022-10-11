@@ -1,6 +1,6 @@
 package com.thinkbeyond.reg.service.api.controller;
 
-import com.thinkbeyond.reg.service.api.entity.User;
+import com.thinkbeyond.reg.service.api.entity.UserRegDetails;
 import com.thinkbeyond.reg.service.api.helper.ExcelHelper;
 import com.thinkbeyond.reg.service.api.service.UserExcelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class ExcelUploadController {
     }
 
     @GetMapping("/getUsers")
-    public List<User> getUsers(){
+    public List<UserRegDetails> getUsers(){
         return this.userExcelService.getAllUsers();
     }
 

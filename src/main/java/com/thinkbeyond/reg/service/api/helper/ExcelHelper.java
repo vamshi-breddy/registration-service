@@ -1,7 +1,7 @@
 package com.thinkbeyond.reg.service.api.helper;
 
 import com.thinkbeyond.reg.service.api.constants.UserConstants;
-import com.thinkbeyond.reg.service.api.entity.User;
+import com.thinkbeyond.reg.service.api.entity.UserRegDetails;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -26,8 +26,8 @@ public class ExcelHelper {
         }
     }
 
-    public static List<User> convertExcelToList(InputStream inputStream){
-        List<User> list = new ArrayList<>();
+    public static List<UserRegDetails> convertExcelToList(InputStream inputStream){
+        List<UserRegDetails> list = new ArrayList<>();
 
         try {
               XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
@@ -43,7 +43,7 @@ public class ExcelHelper {
                 Iterator<Cell> cells = row.iterator();
                 int cid = 0;
 
-                User user = new User();
+                UserRegDetails user = new UserRegDetails();
                 while (cells.hasNext()){
                     Cell cell = cells.next();
 
